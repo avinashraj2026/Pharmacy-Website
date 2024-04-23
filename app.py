@@ -5,10 +5,10 @@ import pymysql
 
 # Database Configuration
 db_config = {
-    'host': 'Avinash',
+    'host': '127.0.0.2',
     'user': 'root',
     'password': 'avinash',
-    'database': 'pharmacy_database'
+    'database': 'pharmacy_application'
 }
 
 # Flask App Setup
@@ -92,6 +92,7 @@ def login():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     # Very similar to login, but insert into database instead
+    print("Registration route accessed")
     if current_user.is_authenticated:
         return redirect(url_for('index'))
 
