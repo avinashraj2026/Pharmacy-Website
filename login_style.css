@@ -51,6 +51,21 @@ body {
 }
 
 .container {
-    /* ... your existing container styles ... */
-    background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px; /* Increased padding overall */
+    /* ... rest of your styles ... */
 }
+
+input[type="text"], input[type="password"],  input[type="email"] {
+    width: 90%;
+    padding: 15px; /* More padding for inputs */
+    margin-bottom: 10px; /* More space between inputs */
+    /* ... rest of your styles ...  */
+}
+
+button[type="submit"] {
+    /* ... your existing button styles ... */
+    margin-top: 20px;  /* Add space between button and above element */
+}
+
