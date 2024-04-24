@@ -64,19 +64,20 @@ def login():
         username = request.form['username']
         password_candidate = request.form['password']
 
-        # Database query: fetch the user and their hashed password
         db = pymysql.connect(**db_config)
-        print("Connection successful")
+        print("Connection successful")  # Good for debugging
         cursor = db.cursor()
-        result = cursor.execute("SELECT * FROM Users WHERE username = %s", (username))
+
+        # Parameterized Query (Still Important)
+        result = cursor.execute("SELECT * FROM Users WHERE username = %s", (username,))
 
         if result > 0:
             data = cursor.fetchone()
-            password = data['password']
 
-            # Compare passwords (the entered one, and the hashed one from the database)
-            if sha256_crypt.verify(password_candidate, password):
-                user = User(data['user_id'], username)
+            # Direct Password Comparison
+            if password_candidate == data[3]:
+                user_id = data[1]
+                user = User(user_id, username)
                 login_user(user)
                 flash('Login successful', 'success')
                 return redirect(url_for('index'))
@@ -88,6 +89,8 @@ def login():
             return render_template('login.html')
 
     return render_template('login.html')  # If 'GET' request
+
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
