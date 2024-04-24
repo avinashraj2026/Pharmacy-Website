@@ -92,16 +92,24 @@ body {
     font-style: italic;
 }
 
-/* Second Panel */
+/* Second Panel 
 .secondary-panel {
-    background-color: #e6f2ff; /* Light blue background */
+    background-color: #bec7d1; 
+    padding: 20px;
+    text-align: center;
+}*/
+
+.secondary-panel {
+    background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ8IDQcNFREWFhURExUYHSggGBoxGxUVITEhMSk3Oi4uFx8zODMsNygtLisBCgoKDQ0NDg0NDysZFRkrNy0rLSs3LTcrKzcrLTcrKzctKys3KysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAABAAIDBwT/xAAXEAEBAQEAAAAAAAAAAAAAAAAAEQES/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECBf/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8A9EqrDWOq5lazWs1jDgVumsU1FrSZppCtKs1UiVqqs00i1qqs1VCtJmqhSqKKqVqqsVUhW2d0UUiVKiitIaKKKB3RRRVCqzVRGhWaKpW6Gel0FaDNSK6msqorVNYNErdVZqoVuqs1EK1SxTSDVVZqpBqmsVUg3VWKakK1RWaqsGqKzRQaqrNFVK1RWaqBoooqlNG6qzRK0KKKodAoohooQKkIV3FFFZabqrFNEaprFVCt01iqhW6qzVQrVVZqoVqmsVVUrdVYqoVuisVUK3RWaqQpq3WaN0RqiijdUrVFFFCndFFFVGqGaqBVZqoGqs1UDUygd1WaKy1WqqzVVStU1iqhW6qxTRG6qxVSFbqrFNCtVVmqhWqqzRQrdVYpoVqqs1UDRRRVDVWaKI1RRRQpqooqpTVQKDVAqoECoU1BA61VkVlrWqqxVVZbqrFNBqqs1UG6qxTQrVVYqolbprGaaDVFZqoNU1moGqKKKDQoClNFVFA1M1CGioKGoKgQEBqAFaTNQN1ViqsrWqKzVVRuqsU0StU1inNUrVNZqQaqZIGllA0mSBVCAoICAgSQVEggNCFA1BboJCoCAhShQBqZpqKUFVQpmnNVCazUDdVZKDSFVBrNVZIGllA0mUDSFQEVAEgqC1aKlFUEIkkCSAFBCqoUihMqshNYpaZaAIFCmgUCBLNNA0smgUEBQQNIJFISBBUKiSAFBAQqgSQBEIVJIVkUBEKBqsmoECggaqoQNFmkCWSK0ggOoEEQUVDSACIUCIEQSBIoECASSFSSRXNJUQaFqVkoUqEs0iNIFFWNYycAkEUpICkhSkkENK0ADoAJDVREIUpIECASKRUkkVwNFSsrQqlZRCVDhwEGiy0io4DgEgikgoqhxEEkkUIpRkNMiAIVRU1mrNEbTOa1iKksQqSKKgkLHzpJpgVFKykkIUkDWHEkVpYUKsOJCtFJBFJFOYokKoCgZ1nQlTWd1jdSVlmnEhGs1vEkaxrEkjSWJAkkiv/Z');
+    background-size: cover; /* Adjusts the background image size to cover the entire section */
+    background-position: center; /* Centers the background image */
     padding: 20px;
     text-align: center;
 }
 
 .secondary-button {
-    background-color: #007bff; /* Blue button color */
-    color: #fff;
+    background-color: #ffffff; /* Blue button color */
+    color: #000000;
     border: none;
     padding: 20px;
     margin: 10px;
@@ -129,7 +137,7 @@ body {
 }
 
 .image-button {
-    background-color: #007bff; /* Blue button color */
+    background-color: #83c8e8; /* Blue button color */
     color: #fff;
     border: none;
     padding: 20px;
