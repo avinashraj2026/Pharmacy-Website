@@ -63,6 +63,17 @@ body {
     color: #fff; /* Button text color */
 }
 
+/* Image Across Section */
+.image-across {
+    text-align: center;
+    margin-top: 20px; /* Add margin from the previous section */
+}
+
+.image-across img {
+    width: 100%; /* Image width 100% of the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Our Motivation Section */
 .motivation {
     padding: 20px;
@@ -134,16 +145,6 @@ body {
 
 .image-button:hover {
     transform: translateY(-5px);
-}
-
-/* Image Across Section */
-.image-across {
-    text-align: center;
-    margin-top: 20px; /* Add margin from the previous section */
-}
-
-.image-across img {
-    max-width: 100%; /* Ensure image doesn't overflow */
 }
 
 /* Disclaimer Section */
