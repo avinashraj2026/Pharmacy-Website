@@ -1,0 +1,41 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2196F3;
+    padding: 10px 0;
+    color: white;
+}
+
+.medicine-slider {
+    width: 100%;
+    overflow: hidden; /* Ensures content outside this container is not visible */
+}
+
+.slide-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.medicine-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.medicine-slide img {
+    width: 100%; /* Adjust based on your design preference */
+    height: auto;
+}
+
+.medicine-name, .price {
+    font-size: 20px;
+    color: #333;
+}

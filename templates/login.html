@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../static/css/login_style.css">
+</head>
+<body>
+
+    <div id="message-popup" class="popup">
+        <span class="close-popup">&times;</span>
+        <div class="popup-content">
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Pharmacy Login</h1>
+
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="/register">Register here</a></p>
+    </div>
+
+</body>
+</html>
+
+
+<script>
+  // Modify this to match how you set messages in Flask
+  let messages = {{ get_flashed_messages(with_categories=True) | tojson }};
+
+  if (messages.length > 0) {
+    let messagePopup = document.getElementById("message-popup");
+    let messageContent = messagePopup.querySelector(".popup-content");
+    let [category, message] = messages[0]; // Display the first message
+
+    messageContent.textContent = message;
+    messageContent.classList.add("alert", "alert-" + category);
+    messagePopup.style.display = "block";
+
+    // Close the popup
+    messagePopup.querySelector(".close-popup").addEventListener('click', () => {
+        messagePopup.style.display = "none";
+    });
+  }
+</script>
