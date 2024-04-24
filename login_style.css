@@ -1,3 +1,8 @@
+body {
+    background-color: #F0F4F5; /* Light blue background */
+    font-family: Arial, sans-serif; /* Basic font */
+}
+
 .container {
     width: 400px;
     margin: 50px auto;
@@ -5,17 +10,25 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
+    background-color: #fff; /* White container background */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
+    border-radius: 3px; /* Rounded corners for inputs */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #2196F3; /* Blue border on focus */
 }
 
 button[type="submit"] {
-    background-color: #008CBA; /* Example color */
+    background-color: #2196F3; /* Blue button color */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -23,9 +36,21 @@ button[type="submit"] {
     border-radius: 5px;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px; /* Add a margin to the bottom of each input field */
-    border: 1px solid #ccc;
+button[type="submit"]:hover {
+    background-color: #0D6EBD; /* Slightly darker blue on hover */
+}
+body {
+    background-image: url('https://img.freepik.com/free-photo/medicine-capsules-global-health-with-geometric-pattern-digital-remix_53876-126742.jpg?t=st=1713941923~exp=1713945523~hmac=4ba75be35523c47dfcdf34966f53cf0895bb575b9b89e26993e04ab3d69455eb&w=1800'); /* Replace with your image path */
+    background-repeat: no-repeat; /* Prevent image repetition if it's smaller*/
+    background-size: cover; /* Image covers the entire viewport */
+    font-family: Arial, sans-serif;
+    display: flex; /* Activate Flexbox (or Grid if you prefer) */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    /* ... your existing container styles ... */
+    background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
 }
