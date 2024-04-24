@@ -3,29 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharmacy Home</title>
-    <link rel="stylesheet" href="../static/css/home_style.css">
+    <title>MediAfford</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home_style.css') }}">
 </head>
 <body>
+    <!-- Top Panel -->
     <header>
-        <nav>
-            <button>Home</button>
-            <button>Profile</button>
-            <button>Orders</button>
-            <button>Logout</button>
+        <div class="top-panel">
+            <img src="LINK_TO_YOUR_LOGO" alt="MediAfford Logo" class="logo">
+            <div class="top-panel-buttons">
+                <button class="icon-button">
+                    <img src="LINK_TO_CART_IMAGE" alt="Cart">
+                    Cart
+                </button>
+                <button class="icon-button">
+                    <img src="LINK_TO_OFFERS_IMAGE" alt="Offers">
+                    Offers
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <button>Catalog</button>
+            <button>Offers</button>
+            <button>About Us</button>
+            <button>Medical Representatives</button>
+            <button>City Network</button>
+            <button>Loyalty System</button>
         </nav>
     </header>
-    <div class="medicine-slider">
-        <div class="slide-container">
-            <!-- Example Slide -->
-            <div class="medicine-slide">
-                <img src="medicine_image.jpg" alt="Medicine">
-                <p class="medicine-name">Medicine Name</p>
-                <p class="price">$20.00</p>
-            </div>
-            <!-- Additional slides would be added here -->
-        </div>
+
+    <!-- Our Motivation Section -->
+    <section class="motivation">
+        <h2>Our Motivation</h2>
+        <p class="motivation-text">"MediAfford is designed to revolutionize the way individuals access and purchase medicines by offering a digital platform that not only tracks and displays a comprehensive catalog of pharmaceutical products but also emphasizes affordability and accessibility. The scope extends to managing user profiles, facilitating secure transactions, and promoting an informed decision-making process regarding drug purchases. The project will leverage technology to ensure that users can easily compare prices between generic and branded options, thus encouraging savings and wider access to necessary medications."</p>
+    </section>
+
+    <!-- Second Panel -->
+    <section class="secondary-panel">
+        <button class="secondary-button">
+            <img src="LINK_TO_IMAGE1" alt="Button Image 1">
+            Top Products
+        </button>
+        <button class="secondary-button">
+            <img src="LINK_TO_IMAGE2" alt="Button Image 2">
+            Personal Care
+        </button>
+        <!-- Add more buttons as needed -->
+    </section>
+
+    <!-- Buttons Grid -->
+    <div class="buttons-grid">
+        <a href="#" class="image-button">
+            <img src="LINK_TO_IMAGE3" alt="Button Image 3">
+            Summer Store
+        </a>
+        <a href="#" class="image-button">
+            <img src="LINK_TO_IMAGE4" alt="Button Image 4">
+            Skin Care
+        </a>
+        <!-- Add more buttons as needed -->
     </div>
-    <script src="../static/js/slider.js"></script>
+
+    <!-- Disclaimer Section -->
+    <footer>
+        <p class="disclaimer">All dosage and advice provided on this website are for informational purposes only and should not be considered as medical advice. Always consult with healthcare professionals for personalized guidance.</p>
+    </footer>
+
 </body>
 </html>

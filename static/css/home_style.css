@@ -1,41 +1,159 @@
-body, html {
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #2196F3;
-    padding: 10px 0;
-    color: white;
-}
-
-.medicine-slider {
-    width: 100%;
-    overflow: hidden; /* Ensures content outside this container is not visible */
-}
-
-.slide-container {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.medicine-slide {
-    min-width: 100%;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f0f4f5; /* Light blue background */
+}
+
+/* Top Panel */
+.top-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 50px; /* Adjust as needed */
+}
+
+.top-panel-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-button img {
+    width: 24px; /* Adjust as needed */
+    margin-right: 5px;
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: #007bff; /* Blue navigation background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #fff; /* Button text color */
+}
+
+/* Our Motivation Section */
+.motivation {
+    padding: 20px;
+    background-color: #e9ecef;
+    text-align: center;
+    margin-bottom: 20px; /* Add margin between Our Motivation and Second Panel */
+}
+
+.motivation h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.motivation-text {
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Second Panel */
+.secondary-panel {
+    background-color: #e6f2ff; /* Light blue background */
     padding: 20px;
     text-align: center;
 }
 
-.medicine-slide img {
-    width: 100%; /* Adjust based on your design preference */
-    height: auto;
+.secondary-button {
+    background-color: #007bff; /* Blue button color */
+    color: #fff;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
-.medicine-name, .price {
-    font-size: 20px;
-    color: #333;
+.secondary-button img {
+    margin-bottom: 10px;
+}
+
+.secondary-button:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons Grid */
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-button {
+    background-color: #007bff; /* Blue button color */
+    color: #fff;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.image-button img {
+    margin-bottom: 10px;
+}
+
+.image-button:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Across Section */
+.image-across {
+    text-align: center;
+    margin-top: 20px; /* Add margin from the previous section */
+}
+
+.image-across img {
+    max-width: 100%; /* Ensure image doesn't overflow */
+}
+
+/* Disclaimer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.disclaimer {
+    font-size: 14px;
 }
