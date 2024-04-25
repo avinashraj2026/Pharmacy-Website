@@ -100,27 +100,52 @@ body {
 }*/
 
 .secondary-panel {
-    background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ8IDQcNFREWFhURExUYHSggGBoxGxUVITEhMSk3Oi4uFx8zODMsNygtLisBCgoKDQ0NDg0NDysZFRkrNy0rLSs3LTcrKzcrLTcrKzctKys3KysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAABAAIDBwT/xAAXEAEBAQEAAAAAAAAAAAAAAAAAEQES/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECBf/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8A9EqrDWOq5lazWs1jDgVumsU1FrSZppCtKs1UiVqqs00i1qqs1VCtJmqhSqKKqVqqsVUhW2d0UUiVKiitIaKKKB3RRRVCqzVRGhWaKpW6Gel0FaDNSK6msqorVNYNErdVZqoVuqs1EK1SxTSDVVZqpBqmsVUg3VWKakK1RWaqsGqKzRQaqrNFVK1RWaqBoooqlNG6qzRK0KKKodAoohooQKkIV3FFFZabqrFNEaprFVCt01iqhW6qzVQrVVZqoVqmsVVUrdVYqoVuisVUK3RWaqQpq3WaN0RqiijdUrVFFFCndFFFVGqGaqBVZqoGqs1UDUygd1WaKy1WqqzVVStU1iqhW6qxTRG6qxVSFbqrFNCtVVmqhWqqzRQrdVYpoVqqs1UDRRRVDVWaKI1RRRQpqooqpTVQKDVAqoECoU1BA61VkVlrWqqxVVZbqrFNBqqs1UG6qxTQrVVYqolbprGaaDVFZqoNU1moGqKKKDQoClNFVFA1M1CGioKGoKgQEBqAFaTNQN1ViqsrWqKzVVRuqsU0StU1inNUrVNZqQaqZIGllA0mSBVCAoICAgSQVEggNCFA1BboJCoCAhShQBqZpqKUFVQpmnNVCazUDdVZKDSFVBrNVZIGllA0mUDSFQEVAEgqC1aKlFUEIkkCSAFBCqoUihMqshNYpaZaAIFCmgUCBLNNA0smgUEBQQNIJFISBBUKiSAFBAQqgSQBEIVJIVkUBEKBqsmoECggaqoQNFmkCWSK0ggOoEEQUVDSACIUCIEQSBIoECASSFSSRXNJUQaFqVkoUqEs0iNIFFWNYycAkEUpICkhSkkENK0ADoAJDVREIUpIECASKRUkkVwNFSsrQqlZRCVDhwEGiy0io4DgEgikgoqhxEEkkUIpRkNMiAIVRU1mrNEbTOa1iKksQqSKKgkLHzpJpgVFKykkIUkDWHEkVpYUKsOJCtFJBFJFOYokKoCgZ1nQlTWd1jdSVlmnEhGs1vEkaxrEkjSWJAkkiv/Z');
-    background-size: cover; /* Adjusts the background image size to cover the entire section */
-    background-position: center; /* Centers the background image */
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    flex-wrap: wrap;
+    gap: 40px; /* Add space between each button */
+    padding: 20px; /* Add padding around the buttons */
+    background-color: #74a5dd; /* Light blue background */
 }
 
 .secondary-button {
-    background-color: #ffffff; /* Blue button color */
-    color: #000000;
-    border: none;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    cursor: pointer;
+    position: relative;
     display: inline-block;
+    background-color: #ffffff; /* White background */
+    border: none;
+    cursor: pointer;
     transition: transform 0.3s ease;
+    width: 200px; /* Adjust the width of the button */
+    height: 200px; /* Adjust the height of the button */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide any overflow */
 }
 
 .secondary-button img {
-    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire button */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.button-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(144, 212, 248, 0.7); /* Semi-transparent white background */
+    border-bottom-left-radius: 8px; /* Rounded corners */
+    border-bottom-right-radius: 8px; /* Rounded corners */
+    font-size: 16px;
+    color: #000000; /* Black text color */
+    transition: opacity 0.3s ease;
+}
+
+.secondary-button:hover .button-text {
+    opacity: 1; /* Show the button text on hover */
 }
 
 .secondary-button:hover {
